@@ -1,12 +1,12 @@
 {
     "problemMatcher": [
         {
-            "owner": "rust",
+            "owner": "pytest",
             "pattern": [
                 {
-                    "regexp": "^(warning|warn|error)(\\[(.*)\\])?: (.*)$",
+                    "regexp": "^(E)(\\s+)(.*)$",
                     "severity": 1,
-                    "message": 4,
+                    "message": 3,
                     "code": 3
                 },
                 {
