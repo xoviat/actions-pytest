@@ -1,22 +1,13 @@
-name: 'rust-cargo'
-description: 'Run cargo command'
-author: 'actions-rs team'
+name: 'python-pytest'
+description: 'Run pytes command'
+author: 'xoviat'
 branding:
   icon: play-circle
   color: black
 inputs:
-  command:
-    description: Cargo command to run (ex. `check` or `build`)
-    required: true
-  toolchain:
-    description: Toolchain to use (without the `+` sign, ex. `nightly`)
-    required: false
   args:
-    description: Arguments for the cargo command
+    description: Arguments for the pytest command
     required: false
-  use-cross:
-    description: Use cross instead of cargo
-    default: false
 
 runs:
   using: 'node12'

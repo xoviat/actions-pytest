@@ -1,26 +1,16 @@
 import path from "path";
 
 import * as core from "@actions/core";
-
+import * as exec from "@actions/exec";
+import * as io from "@actions/io";
 import * as input from "./input";
-import { Cargo, Cross } from "@actions-rs/core";
 
 export async function run(actionInput: input.Input): Promise<void> {
-    let program;
-    if (actionInput.useCross) {
-        program = await Cross.getOrInstall();
-    } else {
-        program = await Cargo.get();
-    }
-
+    const program = await io.which("pytest", true);
     let args: string[] = [];
-    if (actionInput.toolchain) {
-        args.push(`+${actionInput.toolchain}`);
-    }
-    args.push(actionInput.command);
     args = args.concat(actionInput.args);
 
-    await program.call(args);
+    await exec.exec(program, args, {});
 }
 
 async function main(): Promise<void> {
