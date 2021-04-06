@@ -1,5 +1,5 @@
 name: 'python-pytest'
-description: 'Run pytes command'
+description: 'Run pytest command'
 author: 'xoviat'
 branding:
   icon: play-circle
