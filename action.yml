@@ -1,4 +1,4 @@
-name: 'python-pytest'
+name: 'actions-pytest'
 description: 'Run pytest command'
 author: 'xoviat'
 branding:
