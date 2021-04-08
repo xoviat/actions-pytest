@@ -4,7 +4,7 @@
             "owner": "pytest",
             "pattern": [
                 {
-                    "regexp": "^(.*\\.py)(:)(\\d+)(: )([a-zA-Z]+)(\\s+)?$",
+                    "regexp": "^(.*\\.py)(:)(\\d+)(: )([a-zA-Z]+|in <module>)(\\s+)?$",
                     "file": 1,
                     "line": 3,
                     "message": 5
